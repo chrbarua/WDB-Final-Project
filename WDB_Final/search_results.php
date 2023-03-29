@@ -1,9 +1,9 @@
 <?php
 	// connect to the database
 	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "experiences_db";
+	$username = "cbarua";
+	$password = "vacancies obligated northwests";
+	$dbname = "cbarua_db";
 
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	if (!$conn) {
@@ -11,15 +11,15 @@
 	}
 
 	// get the search parameters from the form submission
-	$name = $_POST['exp_name'];
-	$date = $_POST['exp_date'];
-	$time = $_POST['exp_time'];
-	$loc = $_POST['exp_loc'];
-	$out_in = $_POST['exp_out_in'];
-	$day_nt = $_POST['exp_day_nt'];
-	$fd_nfd = $_POST['exp_fd_nfd'];
-	$fam_adt = $_POST['exp_fam_adt'];
-	$price = $_POST['exp_price'];
+	$name = $_POST['EXP_NAME'];
+	$date = $_POST['EXP_DATE'];
+	$time = $_POST['EXP_TIME'];
+	$loc = $_POST['EXP_LOC'];
+	$out_in = $_POST['EXP_OUT_IN'];
+	$day_nt = $_POST['EXP_DAY_NT'];
+	$fd_nfd = $_POST['EXP_FD_NFD'];
+	$fam_adt = $_POST['EXP_FAM_ADT'];
+	$price = $_POST['EXP_PRICE'];
 
 	// build the query string based on the search parameters
 	$query = "SELECT * FROM experiences WHERE 1=1";
